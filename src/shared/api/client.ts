@@ -8,7 +8,6 @@ import type {
   ServerFetcherOptions,
 } from "./types";
 
-const AUTH_COOKIE_NAME = 'auth-token'
 const AUTH_COOKIE_NAME = "auth-token";
 
 function makeAuthInterceptor(token: string): RequestInterceptor {
@@ -24,7 +23,7 @@ export async function createServerFetcher(
   const { cookies } = await import("next/headers");
   const cookieStore = await cookies();
   const token = cookieStore.get(AUTH_COOKIE_NAME)?.value;
-  console.log("BASE_URL:", BASE_URL); // Debug: muestra el token leído del request
+
   const config: FetcherConfig = {
     baseUrl: options.baseUrl ?? BASE_URL,
     requestInterceptors: [
@@ -44,8 +43,6 @@ function readTokenFromCookie(): string | undefined {
   return match?.split("=")[1];
 }
 
-export function createClientFetcher(options: ClientFetcherOptions = {}): FetcherInstance {
-  const token = options.token ?? readTokenFromCookie()
 export function createClientFetcher(
   options: ClientFetcherOptions = {}
 ): FetcherInstance {
@@ -62,5 +59,4 @@ export function createClientFetcher(
   return createFetcherInstance(config);
 }
 
-export const clientFetcher: FetcherInstance = createClientFetcher()
 export const clientFetcher: FetcherInstance = createClientFetcher();

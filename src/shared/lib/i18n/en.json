@@ -1,0 +1,31 @@
+{
+  "header": {
+    "logo": "Logo",
+    "signIn": "Sign In",
+    "dashboard": "Dashboard",
+    "goHome": "Go to home page",
+    "navLabel": "Primary navigation",
+    "signInLabel": "Sign in",
+    "goDashboard": "Go to dashboard"
+  },
+  "landing": {
+    "heading": "Welcome to the Platform",
+    "subtitle": "Your go-to place for online gaming. Fast, secure, and fun.",
+    "cta": "Get Started"
+  },
+  "footer": {
+    "copyright": "© 2026 Placeholder. All rights reserved."
+  },
+  "dashboard": {
+    "heading": "Dashboard",
+    "error": "Error loading user",
+    "loading": "Loading..."
+  },
+  "userCard": {
+    "heading": "User Profile",
+    "email": "Email",
+    "username": "Username",
+    "created": "Created",
+    "updated": "Updated"
+  }
+}
