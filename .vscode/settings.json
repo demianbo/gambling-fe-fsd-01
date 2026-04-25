@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.classFunctions": ["cn", "cva", "cx", "clsx"],
+  "tailwindCSS.experimental.configFile": {
+    "src/app/globals.css": "src/**"
+  }
+}
