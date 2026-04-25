@@ -1,0 +1,31 @@
+{
+  "header": {
+    "logo": "Logo",
+    "signIn": "Iniciar sesión",
+    "dashboard": "Panel",
+    "goHome": "Ir a la página de inicio",
+    "navLabel": "Navegación principal",
+    "signInLabel": "Iniciar sesión",
+    "goDashboard": "Ir al panel"
+  },
+  "landing": {
+    "heading": "Bienvenido a la Plataforma",
+    "subtitle": "Tu lugar de referencia para juegos en línea. Rápido, seguro y divertido.",
+    "cta": "Comenzar"
+  },
+  "footer": {
+    "copyright": "© 2026 Placeholder. Todos los derechos reservados."
+  },
+  "dashboard": {
+    "heading": "Panel",
+    "error": "Error al cargar el usuario",
+    "loading": "Cargando..."
+  },
+  "userCard": {
+    "heading": "Perfil de Usuario",
+    "email": "Correo electrónico",
+    "username": "Usuario",
+    "created": "Creado",
+    "updated": "Actualizado"
+  }
+}
