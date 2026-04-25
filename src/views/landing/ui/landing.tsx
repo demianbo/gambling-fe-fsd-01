@@ -2,7 +2,7 @@ import { Header } from '@/widgets/header'
 import { Footer } from '@/widgets/footer'
 import { LandingHero } from './components/landing-hero'
 
-export function LandingPage() {
+export function LandingView() {
   return (
     <div className="flex min-h-svh flex-col">
       <Header />

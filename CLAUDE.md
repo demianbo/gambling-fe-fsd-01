@@ -19,7 +19,7 @@ Persistent context for the **Gambling Frontend** project (FSD architecture pract
 The project strictly follows FSD. Layers from lowest to highest level:
 
 ```
-shared → entities → features → widgets → pages/app
+shared → entities → features → widgets → views/app
 ```
 
 **Dependency rule**: a layer can only import from layers **below** it in the list above. Never the other way around.
@@ -47,22 +47,23 @@ src/
 ├── features/       ← user actions (empty for now)
 ├── widgets/        ← feature composition (empty for now)
 │
-├── pages/          ← FSD pages layer
+├── views/          ← FSD views layer (UI and page components)
 │   ├── landing/
 │   │   ├── ui/
-│   │   │   ├── page.tsx
-│   │   │   └── components/hero-section.tsx
+│   │   │   ├── landing.tsx
+│   │   │   └── components/landing-hero.tsx
 │   │   └── index.ts
-│   └── user/
+│   └── dashboard/
 │       ├── ui/
-│       │   └── page.tsx
+│       │   ├── dashboard.tsx
+│       │   └── components/user-card.tsx
 │       └── index.ts
 │
-└── app/            ← Next.js App Router (entry points only)
+└── app/            ← Next.js App Router (routing entry points only)
     ├── layout.tsx
-    ├── page.tsx            ← imports from @/pages/landing
-    └── user/
-        └── page.tsx        ← imports from @/pages/user
+    ├── page.tsx            ← imports from @/views/landing
+    └── dashboard/
+        └── page.tsx        ← imports from @/views/dashboard
 ```
 
 ### Public API of each module
@@ -108,4 +109,4 @@ import { UserDto } from '@/entities/user/model/types'
 - **Do not add libraries** unless explicitly requested
 - **Do not generate tests** unless explicitly requested
 - **Never use Pages Router** under any circumstance
-- **Do not break the FSD dependency rule** (shared ← entities ← features ← widgets ← app)
+- **Do not break the FSD dependency rule** (shared ← entities ← features ← widgets ← views ← app)
